@@ -1,6 +1,6 @@
 name: Pull Request Workflow
 on:
-    pull_request:
+      workflow_dispatch:
 
 jobs:
     triggered_by:

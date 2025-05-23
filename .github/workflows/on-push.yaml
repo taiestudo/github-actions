@@ -1,6 +1,6 @@
 name: On Push Workflow
 on:
-    push
+    workflow_dispatch:
 jobs:
     Checkout:
         runs-on: ubuntu-latest
