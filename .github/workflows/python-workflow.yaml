@@ -1,5 +1,5 @@
 name: Python Workflow
-on: push
+on: workflow_dispatch
 jobs:
     python:
         runs-on: ubuntu-latest
