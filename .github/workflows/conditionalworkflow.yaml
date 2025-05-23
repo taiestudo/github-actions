@@ -5,7 +5,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - name:
-              if: github.event.name == 'push'
-              run: echo "This workflow was triggered by a $github.event.name"
+              if: github.event_name == 'push'
+              run: echo "This workflow was triggered by a ${{github.event_name}}"
 
             
