@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: Print Workflow
 
 on:
   push:
@@ -9,4 +9,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
         - name: Print
-          run: print "Hello World"!
+          run: echo "Hello World"
