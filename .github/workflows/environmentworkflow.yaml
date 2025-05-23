@@ -1,0 +1,15 @@
+name: Environment Workflow
+on:
+    push
+jobs:
+    Print:
+        runs-on: ubuntu-latest
+        env: 
+            APP_NAME: "MyAwesomeApp"
+        steps:
+            - name: Print Variable
+              run: echo "Building $APP_NAME"
+            - name: Print Another Variable
+              env:
+                STEP_MESSAGE: Step Completed
+              run: echo "$STEP_MESSAGE"
