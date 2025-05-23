@@ -1,6 +1,6 @@
 name: Matrix Workflow
 on:
-    workflow_dispatch
+    push
 jobs:
     matrix-test:
         runs-on: ubuntu-latest
