@@ -1,0 +1,19 @@
+name: Workflow Dispatch
+on:
+    workflow_dispatch:
+        inputs:
+            log_level:
+                description: Level
+                type: choice
+                options:
+                     - debug 
+                     - info
+                     - warning]
+                default: info
+jobs:
+    logs_level:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Display Log
+              run: |
+                echo "Log level set to: ${{ github.event.inputs.log_level }}"

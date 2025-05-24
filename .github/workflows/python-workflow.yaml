@@ -1,0 +1,11 @@
+name: Python Workflow
+on: workflow_dispatch
+jobs:
+    python:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/setup-python@v5
+            - name: Check Python and pip version  
+              run: |
+                python --version
+                pip --version

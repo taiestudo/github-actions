@@ -1,0 +1,11 @@
+name: Conditional Workflow
+on: workflow_dispatch
+jobs:
+    upload:
+        runs-on: ubuntu-latest
+        steps:
+            - name:
+              if: github.event_name == 'push'
+              run: echo "This workflow was triggered by a ${{github.event_name}}"
+
+            

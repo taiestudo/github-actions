@@ -1,0 +1,10 @@
+name: On Push Workflow
+on:
+    workflow_dispatch:
+jobs:
+    Checkout:
+        runs-on: ubuntu-latest
+        steps:
+             - uses: actions/checkout@v4
+             - name: List all files
+               run: ls -la

@@ -1,0 +1,15 @@
+name: Matrix Workflow
+on:
+    workflow_dispatch
+jobs:
+    matrix-test:
+        runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                python-version: ['3.8', '3.9', '3.11']
+        steps:
+            - name: Test Python Version
+              uses: actions/setup-python@v4
+              with:
+                python-version: ${{ matrix.python-version }}
+
